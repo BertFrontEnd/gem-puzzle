@@ -1,0 +1,19 @@
+{
+  "name": "gem-puzzle",
+  "version": "1.0.0",
+  "description": "Homework of Rolling Scopes School: [Gem Puzzle](https://bertfrontend-gem-puzzle.netlify.app/) -> Deadline: Sunday, November 15, 15.11.2020 23:59",
+  "main": "index.js",
+  "scripts": {
+    "style": "sass --watch gem-puzzle/style.scss gem-puzzle/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BertFrontEnd/gem-puzzle.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BertFrontEnd/gem-puzzle/issues"
+  },
+  "homepage": "https://github.com/BertFrontEnd/gem-puzzle#readme"
+}
