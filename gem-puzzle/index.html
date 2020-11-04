@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./assets/reset.css" />
     <link rel="stylesheet" href="./assets/fonts.css" />
     <link rel="stylesheet" href="./style.css" />
-    <script src="./script.js" defer></script>
+    <script src="./script.js" type="module" defer></script>
     <title>Gem Puzzle</title>
   </head>
   <body>
@@ -28,8 +28,8 @@
       <div class="chip">12</div>
       <div class="chip">13</div>
       <div class="chip">14</div>
-      <div class="chip">15</div>
-      <div class="chip empty"></div>
+      <div id="drag" class="chip" data-id="15" draggable="true">15</div>
+      <div id="replace" class="chip empty" data-id="0"></div>
     </section>
   </body>
 </html>
