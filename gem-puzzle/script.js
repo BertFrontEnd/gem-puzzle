@@ -6,4 +6,4 @@ import {
   dragendHandler,
 } from './assets/module/functions.js';
 
-toReplace.addEventListener('dragstart');
+toReplace.addEventListener('dragstart', dragstartHandler);
