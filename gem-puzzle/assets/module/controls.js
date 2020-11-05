@@ -1,11 +1,19 @@
 import { gamePlayPause } from './elements.js';
 
-const isPlayPause = (e) => {
+const toPlayPause = (e) => {
   /*   if (gamePlayPause.classList.contains('play')) {
     gamePlayPause.style.backgroundImage = `url(./assets/images/control/pause.svg)`;
     console.log(gamePlayPause);
   } else {
     gamePlayPause.style.backgroundImage = `url(./assets/images/control/play.svg)`;
+    console.log(gamePlayPause);
+  } */
+
+  /* if (e.target.classList.contains('play')) {
+    gamePlayPause.classList.add('pause');
+    console.log(gamePlayPause);
+  } else {
+    gamePlayPause.classList.remove('pause');
     console.log(gamePlayPause);
   } */
 
@@ -15,4 +23,4 @@ const isPlayPause = (e) => {
   }
 };
 
-export { isPlayPause };
+export { toPlayPause };

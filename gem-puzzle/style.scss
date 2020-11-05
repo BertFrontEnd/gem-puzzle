@@ -46,14 +46,11 @@ body {
     color: #e4fde1;
 
     .time {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       width: 45px;
-
-      span {
-        margin: 1px;
-      }
+      color: #e4fde1;
+      background-color: transparent;
+      border: none;
+      outline: none;
     }
 
     .step {
@@ -67,21 +64,26 @@ body {
       align-items: center;
       width: 135px;
 
-      span {
+      button {
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
-        width: 16px;
-        height: 16px;
+        width: 18px;
+        height: 18px;
+        background-color: transparent;
         background-repeat: no-repeat;
         background-size: 100%;
+        border: none;
+        outline: none;
+        opacity: 1;
         transition: 0.3s;
+
         cursor: pointer;
-        transform-origin: center;
 
         &:active {
           @extend %active-control;
+          opacity: 0;
         }
       }
 
@@ -98,10 +100,14 @@ body {
       }
 
       .play {
+        width: 16px;
+        height: 16px;
         background-image: url(./assets/images/control/play.svg);
       }
 
       .pause {
+        width: 16px;
+        height: 16px;
         background-image: url(./assets/images/control/pause.svg);
       }
     }
