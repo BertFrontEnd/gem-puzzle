@@ -1,4 +1,6 @@
+const gamePlayPause = document.querySelector('.play');
+
 const toReplace = document.getElementById('replace');
 const toDrag = document.getElementById('drag');
 
-export { toReplace, toDrag };
+export { gamePlayPause, toReplace, toDrag };

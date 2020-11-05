@@ -12,30 +12,47 @@
     <title>Gem Puzzle</title>
   </head>
   <body>
-    <h1>Gem Puzzle</h1>
-    <section class="info">
-      <span class="time">00:00</span>
-      <span class="step">0</span>
-      <div class="control"><span class="play"></span></div>
-    </section>
-    <section class="container">
-      <div class="chip">1</div>
-      <div class="chip">2</div>
-      <div class="chip">3</div>
-      <div class="chip">4</div>
-      <div class="chip">5</div>
-      <div class="chip">6</div>
-      <div class="chip">7</div>
-      <div id="drag" class="chip" draggable="true">8</div>
-      <div id="replace" class="chip empty" data-id="0"></div>
-    </section>
-    <section class="fields">
-      <span class="three">3&times;3</span>
-      <span class="four">4&times;4</span>
-      <span class="five">5&times;5</span>
-      <span class="six">6&times;6</span>
-      <span class="seven">7&times;7</span>
-      <span class="eight">8&times;8</span>
-    </section>
+    <header class="header">
+      <h1>Gem Puzzle</h1>
+      <section class="info">
+        <div class="time">
+          <span class="hour">00</span>
+          <span>:</span>
+          <span class="minute">00</span>
+          <span>:</span>
+          <span class="second">00</span>
+        </div>
+        <span class="step">0</span>
+        <div class="control">
+          <span class="save"></span>
+          <span class="restore"></span>
+          <span class="shuffle"></span>
+          <span class="play"></span>
+        </div>
+      </section>
+    </header>
+    <main class="main">
+      <section class="container">
+        <div class="chip">1</div>
+        <div class="chip">2</div>
+        <div class="chip">3</div>
+        <div class="chip">4</div>
+        <div class="chip">5</div>
+        <div class="chip">6</div>
+        <div class="chip">7</div>
+        <div id="drag" class="chip" draggable="true">8</div>
+        <div id="replace" class="chip empty" data-id="0"></div>
+      </section>
+    </main>
+    <footer class="footer">
+      <section class="fields">
+        <span class="three">3&times;3</span>
+        <span class="four">4&times;4</span>
+        <span class="five">5&times;5</span>
+        <span class="six">6&times;6</span>
+        <span class="seven">7&times;7</span>
+        <span class="eight">8&times;8</span>
+      </section>
+    </footer>
   </body>
 </html>
