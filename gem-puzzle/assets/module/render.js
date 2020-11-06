@@ -1,18 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="icon" type="image/png" href="./assets/images/favicon.png" /> -->
-    <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg" />
-    <link rel="stylesheet" href="./assets/reset.css" />
-    <link rel="stylesheet" href="./assets/fonts.css" />
-    <link rel="stylesheet" href="./style.css" />
-    <script src="./script.js" type="module" defer></script>
-    <title>Gem Puzzle</title>
-  </head>
-  <body>
-    <!--     <header class="header">
+import { gameBody } from './elements.js';
+
+const headerContent = `
+    <header class="header">
       <h1>Gem Puzzle</h1>
       <section class="info">
         <input class="time" type="text" value="00:00" disabled />
@@ -25,6 +14,9 @@
         </div>
       </section>
     </header>
+`;
+
+const mainContent = `
     <main class="main">
       <section class="container">
         <div class="chip">1</div>
@@ -34,10 +26,13 @@
         <div class="chip">5</div>
         <div class="chip">6</div>
         <div class="chip">7</div>
-        <div id="drag" class="chip" draggable="true">8</div>
-        <div id="replace" class="chip empty" data-id="0"></div>
+        <div class="chip">8</div>
+        <div class="chip">9</div>
       </section>
     </main>
+`;
+
+const footerContent = `
     <footer class="footer">
       <section class="fields">
         <button class="field three">3&times;3</button>
@@ -47,6 +42,13 @@
         <button class="field seven">7&times;7</button>
         <button class="field eight">8&times;8</button>
       </section>
-    </footer> -->
-  </body>
-</html>
+    </footer>
+`;
+
+const renderGameBody = () => {
+  gameBody.insertAdjacentHTML('afterBegin', footerContent);
+  gameBody.insertAdjacentHTML('afterBegin', mainContent);
+  gameBody.insertAdjacentHTML('afterBegin', headerContent);
+};
+
+export { renderGameBody };
