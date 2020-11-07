@@ -1,5 +1,6 @@
-const gameBody = document.querySelector('body');
+// const gameBody = document.querySelector('body');
 const gameTime = document.querySelector('.time');
+console.log(gameTime);
 const gameControls = document.querySelectorAll('.controls > .control');
 const gamePlayPause = document.querySelector('.play');
 const gameFields = document.querySelectorAll('.fields > .field');
@@ -7,7 +8,7 @@ const toReplace = document.getElementById('replace');
 const toDrag = document.getElementById('drag');
 
 export {
-  gameBody,
+  // gameBody,
   gameTime,
   gameControls,
   gamePlayPause,

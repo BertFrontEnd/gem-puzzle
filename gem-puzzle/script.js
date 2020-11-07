@@ -1,6 +1,6 @@
 // Import
 
-import { renderGameBody } from './assets/module/render.js';
+let { renderGameBody } = await import('./assets/module/render.js');
 import {
   gameControls,
   gamePlayPause,
@@ -22,7 +22,11 @@ import {
 
 // Handlers
 
-window.addEventListener('DOMContentLoaded', renderGameBody);
+document.addEventListener('DOMContentLoaded', renderGameBody);
+
+/* document.addEventListener('DOMContentLoaded', async () => {
+  await renderGameBody();
+}); */
 
 gamePlayPause.addEventListener('click', toPlayPause);
 gamePlayPause.addEventListener('click', setTime);

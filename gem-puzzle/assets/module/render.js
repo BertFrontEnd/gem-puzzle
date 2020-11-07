@@ -1,4 +1,4 @@
-import { gameBody } from './elements.js';
+// import { gameBody } from './elements.js';
 
 const headerContent = `
     <header class="header">
@@ -46,9 +46,17 @@ const footerContent = `
 `;
 
 const renderGameBody = () => {
-  gameBody.insertAdjacentHTML('afterBegin', footerContent);
-  gameBody.insertAdjacentHTML('afterBegin', mainContent);
-  gameBody.insertAdjacentHTML('afterBegin', headerContent);
+  document
+    .querySelector('body')
+    .insertAdjacentHTML('afterbegin', footerContent);
+  document.querySelector('body').insertAdjacentHTML('afterbegin', mainContent);
+  document
+    .querySelector('body')
+    .insertAdjacentHTML('afterbegin', headerContent);
+
+  console.log('Render is done!');
+
+  /* document.write(`${headerContent}${mainContent}${footerContent}`); */
 };
 
 export { renderGameBody };
