@@ -59,4 +59,6 @@ const renderGameBody = () => {
   /* document.write(`${headerContent}${mainContent}${footerContent}`); */
 };
 
-export { renderGameBody };
+renderGameBody();
+
+// export { renderGameBody };
