@@ -306,19 +306,3 @@ const renderGameField = (e) => {
 };
 
 export { renderGameField };
-
-/*     if (gameField.classList.contains('three')) {
-      gameContainer.textContent = '';
-      field = `
-        <div class="chip">1</div>
-        <div class="chip">2</div>
-        <div class="chip">3</div>
-        <div class="chip">4</div>
-        <div class="chip">5</div>
-        <div class="chip">6</div>
-        <div class="chip">7</div>
-        <div class="chip">8</div>
-        <div class="chip">9</div>
-      `;
-      gameContainer.insertAdjacentHTML('afterbegin', field);
-    } */

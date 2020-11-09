@@ -6,11 +6,6 @@ const toPlayPause = () => {
     gamePlayPause.classList.toggle('pause');
     console.log(gamePlayPause);
   }
-  if (gameContainer.classList.contains('pop-up')) {
-    gameContainer.classList.remove('pop-up');
-  } else {
-    gameContainer.classList.add('pop-up');
-  }
 };
 
 export { toPlayPause };

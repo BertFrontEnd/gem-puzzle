@@ -16,8 +16,8 @@ const headerContent = `
 
 const mainContent = `
     <main class="main">
-      <section class="container pop-up">
-      </section>
+      <section class="container"></section>
+      <section class="pop-up">Please, choose field to play</section>
     </main>
 `;
 
