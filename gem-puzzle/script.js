@@ -1,8 +1,8 @@
 // Import
 
 import { renderGameField } from './assets/module/render.js';
-import { gameControls, gamePlayPause, gameFields, toReplace, toDrag } from './assets/module/elements.js';
-import { disableButton, addPopUp, removePopUp } from './assets/module/utilities.js';
+import { gameControls, gamePlayPause, gameActiveField, gameFields, toReplace, toDrag } from './assets/module/elements.js';
+import { disableButton, addPopUp, removePopUp, setActiveField } from './assets/module/utilities.js';
 import { toPlayPause } from './assets/module/controls.js';
 import { setTime, resetTime } from './assets/module/timer.js';
 import { dragoverHandler, dropHandler, dragstartHandler, dragendHandler } from './assets/module/handlers.js';
@@ -22,6 +22,8 @@ gamePlayPause.addEventListener('click', () => {
 for (let gameControl of gameControls) {
   gameControl.addEventListener('click', disableButton);
 }
+
+gameActiveField.addEventListener('click', setActiveField);
 
 for (let gameField of gameFields) {
   gameField.addEventListener('click', resetTime);

@@ -9,10 +9,10 @@ let result = '';
 // Functions
 
 const setTime = () => {
-  console.log('++second before: ', second);
+  // console.log('++second before: ', second);
   second++;
-  console.log('++second after: ', second);
-  console.log('---------------');
+  // console.log('++second after: ', second);
+  // console.log('---------------');
 
   if (gamePlayPause.classList.contains('pause')) {
     if (second == 60) {
@@ -22,15 +22,13 @@ const setTime = () => {
       minute = minute;
     }
 
-    gameTime.value = `${minute < 10 ? '0' + minute : minute}:${
-      second < 10 ? '0' + second : second
-    }`;
+    gameTime.value = `${minute < 10 ? '0' + minute : minute}:${second < 10 ? '0' + second : second}`;
 
     /* currentTime = gameTime.value; */
 
     result = window.setTimeout(setTime, 1000);
   } else {
-    console.log('--second before: ', second);
+    // console.log('--second before: ', second);
     return second--;
   }
 };

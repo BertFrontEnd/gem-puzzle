@@ -1,4 +1,4 @@
-import { gameContainer } from './elements.js';
+import { gameContainer, gameFields } from './elements.js';
 
 const disableButton = (e) => {
   e.target.disabled = true;
@@ -13,7 +13,16 @@ const addPopUp = (content) => {
 };
 
 const removePopUp = () => {
-  document.querySelector('.pop-up').remove();
+  if (document.querySelector('.pop-up')) {
+    document.querySelector('.pop-up').remove();
+  }
 };
 
-export { disableButton, addPopUp, removePopUp };
+const setActiveField = (e) => {
+  gameFields.forEach((element) => {
+    element.classList.remove('active-field');
+    e.target.classList.add('active-field');
+  });
+};
+
+export { disableButton, addPopUp, removePopUp, setActiveField };
