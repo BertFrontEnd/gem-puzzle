@@ -30,17 +30,13 @@ const setGameField = (amount, width, height, size) => {
   console.log(fieldNumbers);
 
   for (let i = 0; i < allChips.length; i++) {
-    allChips[i].setAttribute('id', [i]);
+    allChips[i].setAttribute('id', `${[i] < 10 ? '0' + [i] : i}`);
     console.log(allChips[i]);
   }
 
-  const fillGrid = (items, fieldNumbers) => {
-    items.forEach((item, i) => {
-      item.innerText = fieldNumbers[i];
-    });
-  };
-
-  fillGrid(allChips, fieldNumbers);
+  allChips.forEach((chip, i) => {
+    chip.innerText = fieldNumbers[i];
+  });
 };
 
 const renderGameField = (e) => {
