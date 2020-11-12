@@ -28,6 +28,19 @@ const setGameField = (amount, width, height, size) => {
 
   fieldNumbers.push('');
   console.log(fieldNumbers);
+
+  for (let i = 0; i < allChips.length; i++) {
+    allChips[i].setAttribute('id', [i]);
+    console.log(allChips[i]);
+  }
+
+  const fillGrid = (items, fieldNumbers) => {
+    items.forEach((item, i) => {
+      item.innerText = fieldNumbers[i];
+    });
+  };
+
+  fillGrid(allChips, fieldNumbers);
 };
 
 const renderGameField = (e) => {
