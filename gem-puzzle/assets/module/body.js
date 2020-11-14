@@ -5,10 +5,10 @@ const headerContent = `
         <input class="time" type="text" value="00:00" disabled />
         <output class="step">0</output>
         <div class="controls">
-          <button class="control save"></button>
+          <button class="control save" alt="save"></button>
           <button class="control restore"></button>
-          <button class="control shuffle"></button>
-          <button class="control play"></button>
+          <button class="control shuffle" disabled></button>
+          <button class="control play" disabled></button>
         </div>
       </section>
     </header>
