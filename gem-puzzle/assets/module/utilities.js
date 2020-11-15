@@ -70,22 +70,22 @@ const setDraggable = (window.setDraggable = function (items) {
 
 const getState = (items) => {
   const content = [];
-  items.forEach((item, i) => {
+  items.forEach((item) => {
     content.push(item.innerText);
   });
   return content;
 };
 
-const getDimension = (state, amount) => {
+const getDimension = (state, number) => {
   let j = 0;
-  let arr = [];
+  let array = [];
   const { content } = state;
-  for (let i = 0; i < amount; i++) {
-    arr.push(content.slice(j, j + amount));
-    j += amount;
+  for (let i = 0; i < number; i++) {
+    array.push(content.slice(j, j + number));
+    j += number;
   }
 
-  return arr;
+  return array;
 };
 
 export {

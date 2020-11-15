@@ -6,7 +6,7 @@ let field = ``;
 let allChips = ``;
 let fieldNumbers = [];
 
-const getGameField = (amount, width, height, size) => {
+const getGameField = (amount, width, height, size, number) => {
   gameContainer.textContent = '';
   field = '';
   fieldNumbers = [];
@@ -42,11 +42,9 @@ const getGameField = (amount, width, height, size) => {
   }
 
   const state = {};
-  state.content = fieldNumbers;
-  console.log(state);
 
   state.content = getState(allChips);
-  state.dimension = getDimension(state);
+  state.dimension = getDimension(state, number);
 
   console.log('The state content', state.content);
   console.log('The state dimension', state.dimension);
