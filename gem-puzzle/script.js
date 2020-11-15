@@ -1,7 +1,7 @@
 // Import
 
 import { renderGameField, renderShuffleGameField } from './assets/module/renders.js';
-import { gameControls, gameShuffleField, gamePlayPause, gameActiveField, gameFields, toReplace, toDrag } from './assets/module/elements.js';
+import { gameControls, gameShuffleField, gamePlayPause, gameActiveField, gameFields } from './assets/module/elements.js';
 import {
   disableButton,
   addPopUp,
@@ -13,7 +13,8 @@ import {
 } from './assets/module/utilities.js';
 import { toPlayPause } from './assets/module/controls.js';
 import { setTime, resetTime } from './assets/module/timer.js';
-import { dragoverHandler, dropHandler, dragstartHandler, dragendHandler } from './assets/module/handlers.js';
+
+// Functions
 
 // Handlers
 
@@ -55,9 +56,3 @@ for (let field of document.querySelectorAll('.field')) {
 gameShuffleField.addEventListener('click', resetTime);
 gameShuffleField.addEventListener('click', toPlayPause);
 gameShuffleField.addEventListener('click', setTime);
-
-/* toReplace.addEventListener('dragstart', dragstartHandler);
-toReplace.addEventListener('dragend', dragendHandler);
-
-toDrag.addEventListener('drop', dropHandler);
-toDrag.addEventListener('dragover', dragoverHandler); */

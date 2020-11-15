@@ -1,5 +1,6 @@
 import { gameContainer } from './elements.js';
-import { setShuffleArray } from './utilities.js';
+import { setShuffleArray, setDroppable, setDraggable, getState, getDimension } from './utilities.js';
+import { dragOverHandler, dropHandler, dragStartHandler, dragEndHandler } from './handlers.js';
 
 let field = ``;
 let allChips = ``;
@@ -37,8 +38,26 @@ const getGameField = (amount, width, height, size) => {
 
   for (let i = 0; i < allChips.length; i++) {
     allChips[i].setAttribute('id', `${[i] < 10 ? '0' + [i] : i}`);
-    // console.log(allChips[i]);
+    //  console.log(allChips[i]);
   }
+
+  const state = {};
+  state.content = fieldNumbers;
+  console.log(state);
+
+  state.content = getState(allChips);
+  state.dimension = getDimension(state);
+
+  console.log('The state content', state.content);
+  console.log('The state dimension', state.dimension);
+
+  setDroppable(allChips);
+  setDraggable(allChips);
+
+  dragOverHandler();
+  dropHandler();
+  dragStartHandler();
+  dragEndHandler();
 };
 
 export { getGameField };

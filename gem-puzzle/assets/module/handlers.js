@@ -1,25 +1,33 @@
-const dragoverHandler = (e) => {
-  console.log('Dragover Handler');
-  e.preventDefault;
-};
+import { setDroppable, setDraggable } from './utilities.js';
 
-const dropHandler = (e) => {
-  console.log('Drop Handler');
-  e.preventDefault;
-  const data = e.dataTransfer.getData('text/plain');
-  console.log(data);
+const dragOverHandler = (window.dragOverHandler = function (e) {
+  /* e.preventDefault(); */
+  console.log('Over');
+});
+
+const dropHandler = (window.dropHandler = function (e) {
+  /* e.preventDefault(); */
+  /*  const data = e.dataTransfer.getData('text/plain');
   e.target.innerText = document.getElementById(data).innerText;
-  document.getElementById(data).innerText = '';
-};
+  e.target.classList.remove('empty');
+  e.target.setAttribute('ondrop', '');
+  e.target.setAttribute('ondragover', '');
+  document.getElementById(data).innerText = ''; */
+  console.log('Drop');
+});
 
-const dragstartHandler = (ev) => {
-  console.log('Dragstart Handler');
-  ev.dataTransfer.setData('text/plain', ev.target.id);
-};
+const dragStartHandler = (window.dragStartHandler = function (e) {
+  /* e.dataTransfer.setData('text/plain', e.target.id); */
+  console.log('Start');
+});
 
-const dragendHandler = (e) => {
-  console.log('Dragend Handler');
-  e.dataTransfer.clearData();
-};
+const dragEndHandler = (window.dragEndHandler = function (e) {
+  /*  e.dataTransfer.clearData(); */
 
-export { dragoverHandler, dropHandler, dragstartHandler, dragendHandler };
+  setDroppable(document.querySelectorAll('.chip'));
+  setDraggable(document.querySelectorAll('.chip'));
+
+  console.log('End');
+});
+
+export { dragOverHandler, dropHandler, dragStartHandler, dragEndHandler };
