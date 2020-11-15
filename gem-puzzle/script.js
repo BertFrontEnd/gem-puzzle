@@ -55,4 +55,5 @@ for (let field of document.querySelectorAll('.field')) {
 
 gameShuffleField.addEventListener('click', resetTime);
 gameShuffleField.addEventListener('click', toPlayPause);
+gameShuffleField.addEventListener('click', disableButton);
 gameShuffleField.addEventListener('click', setTime);

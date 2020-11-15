@@ -17,7 +17,7 @@ const headerContent = `
 const mainContent = `
     <main class="main">
       <section class="container"></section>
-      <section class="pop-up">Please, choose field to play</section>
+      <section class="pop-up"><div>Choose field to play, please!</div><div>Postpone the check at a later date or let me know what you will check now, please...</div></section>
     </main>
 `;
 
