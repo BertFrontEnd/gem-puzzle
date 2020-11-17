@@ -55,6 +55,8 @@ const setDroppable = (window.setDroppable = function (items) {
       item.setAttribute('ondragover', 'dragOverHandler();');
       item.setAttribute('class', 'empty');
       item.setAttribute('draggable', 'false');
+      item.setAttribute('ondragstart', '');
+      item.setAttribute('ondragend', '');
     }
     return;
   });
@@ -74,6 +76,13 @@ const getState = (items) => {
     content.push(item.innerText);
   });
   return content;
+};
+
+const getEmptyCell = (amountField) => {
+  const emptyCellNumber = state.emptyCellIndex + 1;
+  const emptyCellRow = Math.ceil(emptyCellNumber / amountField);
+  const emptyCellCol = amountField - (amountField * emptyCellRow - emptyCellNumber);
+  return [emptyCellRow - 1, emptyCellCol - 1];
 };
 
 const getDimension = (state, number) => {
@@ -100,5 +109,6 @@ export {
   setDroppable,
   setDraggable,
   getState,
+  getEmptyCell,
   getDimension,
 };
